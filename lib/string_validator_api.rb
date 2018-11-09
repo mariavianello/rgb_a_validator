@@ -4,7 +4,8 @@ class StringValidatorApi < Sinatra::Base
   }
 
   get '/beep' do
-    'BOOP'
+    result = 'BOOP'
+    json(:result => result)
   end
 
   post '/valid_rgb_a' do

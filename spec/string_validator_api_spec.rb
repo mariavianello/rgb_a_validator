@@ -7,9 +7,10 @@ RSpec.describe StringValidatorApi do
 
   describe 'GET /beep' do
     it 'responds with BOOP' do
-      get '/beep'
+      get '/beep', 'CONTENT_TYPE' => 'application/json'
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to eq('BOOP')
+      response = JSON.parse(last_response.body)
+      expect(response['result']).to eq('BOOP')
     end
   end
 
