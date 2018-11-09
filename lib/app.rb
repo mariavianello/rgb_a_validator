@@ -1,6 +1,6 @@
 require 'active_support/all'
-require 'sinatra'
 require 'rack/parser'
+require 'sinatra'
 require 'sinatra/json'
 
 require 'rgb'
@@ -8,3 +8,4 @@ require 'rgba'
 require 'rgb_a_utils'
 require 'rgb_value_parser'
 require 'string_validator'
+require 'string_validator_api'
