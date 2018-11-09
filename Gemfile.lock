@@ -61,8 +61,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  pry
-  rack-parser
+  pry (= 0.12.0)
+  rack-parser (= 0.7.0)
   rack-test (~> 1.1.0)
   rspec (= 3.8.0)
   sinatra (~> 2.0.4)
