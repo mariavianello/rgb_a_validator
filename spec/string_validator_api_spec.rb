@@ -16,7 +16,7 @@ RSpec.describe StringValidatorApi do
 
   describe 'POST /valid_rgb_a' do
     it 'validates a string is rgb or rgba ' do
-      post '/valid_rgb_a', {:string => 'rgb(0,0,0)'}.to_json, 'CONTENT_TYPE' => 'application/json'
+      post '/valid_rgb_a', {:input_string => 'rgb(0,0,0)'}.to_json, 'CONTENT_TYPE' => 'application/json'
       expect(last_response.status).to eq(200)
       response = JSON.parse(last_response.body)
       expect(response['result']).to eq(true)

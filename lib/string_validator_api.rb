@@ -9,7 +9,7 @@ class StringValidatorApi < Sinatra::Base
   end
 
   post '/valid_rgb_a' do
-    result = StringValidator.valid_rgb_a?(params[:string])
+    result = StringValidator.valid_rgb_a?(params[:input_string])
     json(:result => result)
   end
 end
