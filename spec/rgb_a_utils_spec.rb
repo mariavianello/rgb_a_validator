@@ -2,45 +2,6 @@ require 'valid_rgb'
 require 'pry'
 
 RSpec.describe ValidRgb do
-  describe '.valid_rgb_a?' do
-    context 'given a non rbg a string' do
-      it 'returns false' do
-        result = ValidRgb.valid_rgb_a?('abc(0, 0, 0')
-        expect(result).to eq(false)
-      end
-    end
-
-    context 'given a correct rgb string' do
-      it 'returns true' do
-        result = ValidRgb.valid_rgb_a?('rgb(0,255,0)')
-        expect(result).to eq(true)
-      end
-    end
-
-    context 'given an incorrect rgb string' do
-      it 'returns false' do
-        result = ValidRgb.valid_rgb_a?('rgb(0,0,0,0)')
-        expect(result).to eq(false)
-      end
-    end
-
-    context 'given a correct rgba string' do
-      it 'returns true' do
-        result = ValidRgb.valid_rgb_a?('rgba(0,255,0,0)')
-        expect(result).to eq(true)
-      end
-    end
-
-    context 'given an incorrect rgba string' do
-      it 'returns false' do
-        result = ValidRgb.valid_rgb_a?('rgba(0,255,0,50)')
-        expect(result).to eq(false)
-      end
-    end
-  end
-
-
-
 
   describe '.alpha_in_valid_range?' do
     context 'given a valid alpha number' do
