@@ -3,6 +3,15 @@ class StringValidatorApi < Sinatra::Base
     'application/json' => proc { |data| JSON.parse(data) }
   }
 
+  before do
+    response.headers['Access-Control-Allow-Origin']="*"
+    response.headers['Access-Control-Allow-Headers']='Content-Type'
+  end
+
+  options "*" do
+    200
+  end
+
   get '/beep' do
     result = 'BOOP'
     json(:result => result)
